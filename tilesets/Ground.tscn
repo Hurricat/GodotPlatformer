@@ -289,7 +289,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="9" type="Sprite" parent="." index="9"]
 
-editor/display_folded = true
 position = Vector2( 0, 96 )
 texture = ExtResource( 1 )
 centered = false
@@ -316,11 +315,11 @@ bounce = 0.0
 visible = false
 position = Vector2( 8, 8 )
 shape = SubResource( 1 )
+one_way_collision = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="10" type="Sprite" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 32, 96 )
 texture = ExtResource( 1 )
 centered = false
@@ -347,11 +346,11 @@ bounce = 0.0
 visible = false
 position = Vector2( 8, 8 )
 shape = SubResource( 1 )
+one_way_collision = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="11" type="Sprite" parent="." index="11"]
 
-editor/display_folded = true
 position = Vector2( 64, 96 )
 texture = ExtResource( 1 )
 centered = false
@@ -378,11 +377,11 @@ bounce = 0.0
 visible = false
 position = Vector2( 8, 8 )
 shape = SubResource( 1 )
+one_way_collision = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="12" type="Sprite" parent="." index="12"]
 
-editor/display_folded = true
 position = Vector2( 0, 128 )
 texture = ExtResource( 1 )
 centered = false
@@ -409,11 +408,11 @@ bounce = 0.0
 visible = false
 position = Vector2( 8, 8 )
 shape = SubResource( 1 )
+disabled = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="13" type="Sprite" parent="." index="13"]
 
-editor/display_folded = true
 position = Vector2( 32, 128 )
 texture = ExtResource( 1 )
 centered = false
@@ -440,11 +439,11 @@ bounce = 0.0
 visible = false
 position = Vector2( 8, 8 )
 shape = SubResource( 1 )
+disabled = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="14" type="Sprite" parent="." index="14"]
 
-editor/display_folded = true
 position = Vector2( 64, 128 )
 texture = ExtResource( 1 )
 centered = false
@@ -471,6 +470,7 @@ bounce = 0.0
 visible = false
 position = Vector2( 8, 8 )
 shape = SubResource( 1 )
+disabled = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="15" type="Sprite" parent="." index="15"]

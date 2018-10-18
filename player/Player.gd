@@ -12,6 +12,11 @@ var new_anim
 var velocity = Vector2()
 
 func _ready():
+	hide()
+
+func start(pos):
+	position = pos
+	show()
 	change_state(IDLE)
 
 func change_state(new_state):
@@ -43,6 +48,7 @@ func get_input():
 	if jump and is_on_floor():
 		change_state(JUMP)
 		velocity.y = -jump_speed
+		$JumpSound.play()
 	if state == IDLE and velocity.x != 0:
 		change_state(WALK)
 	if state == WALK and velocity.x == 0:
