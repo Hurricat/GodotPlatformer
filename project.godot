@@ -15,8 +15,8 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=480
-window/size/height=320
+window/size/width=512
+window/size/height=448
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
@@ -62,4 +62,5 @@ jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 [rendering]
 
 quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0, 0.388235, 0.741176, 1 )
 environment/default_environment="res://default_env.tres"

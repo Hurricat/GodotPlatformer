@@ -36,10 +36,10 @@ func get_input():
 	velocity.x = 0
 	if right:
 		velocity.x += walk_speed
-		$Sprite.flip_h = false
+		$Sprite.flip_h = true
 	if left:
 		velocity.x -= walk_speed
-		$Sprite.flip_h = true
+		$Sprite.flip_h = false
 	if jump and is_on_floor():
 		change_state(JUMP)
 		velocity.y = -jump_speed

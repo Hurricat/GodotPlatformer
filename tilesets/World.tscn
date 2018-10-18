@@ -11,7 +11,6 @@ extents = Vector2( 8, 8 )
 
 [node name="grass_left" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true

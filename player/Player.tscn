@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/player/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/player/mario.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5, 10 )
+extents = Vector2( 5, 12 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=2]
 
 resource_name = "idle"
 length = 0.1
@@ -24,10 +24,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=3]
 
 resource_name = "jump"
 length = 0.1
@@ -43,13 +43,13 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 
 resource_name = "walk"
-length = 0.2
+length = 0.3
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -59,10 +59,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 9, 10 ]
+"values": [ 10, 9, 8 ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -83,15 +83,15 @@ gravity = 30
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-vframes = 3
-hframes = 11
-frame = 9
-_sections_unfolded = [ "Animation" ]
+vframes = 2
+hframes = 8
+frame = 8
+_sections_unfolded = [ "Animation", "Region" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, 6 )
-shape = SubResource( 6 )
+position = Vector2( 0, 3 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
@@ -101,9 +101,9 @@ autoplay = "idle"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/idle = SubResource( 7 )
-anims/jump = SubResource( 8 )
-anims/walk = SubResource( 9 )
+anims/idle = SubResource( 2 )
+anims/jump = SubResource( 3 )
+anims/walk = SubResource( 4 )
 blend_times = [  ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
@@ -112,10 +112,10 @@ anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 0.5, 0.5 )
-limit_left = 0
-limit_top = 0
+limit_left = -10000000
+limit_top = -10000000
 limit_right = 10000000
-limit_bottom = 160
+limit_bottom = 432
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
