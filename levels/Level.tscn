@@ -1,13 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://assets/backgrounds/1.png" type="Texture" id=2]
 [ext_resource path="res://tilesets/Ground.tres" type="TileSet" id=3]
-[ext_resource path="res://tilesets/Collectibles.tres" type="TileSet" id=4]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/music/Overworld.ogg" type="AudioStream" id=6]
+[ext_resource path="res://tilesets/Blocks.tres" type="TileSet" id=4]
+[ext_resource path="res://tilesets/Collectibles.tres" type="TileSet" id=5]
+[ext_resource path="res://tilesets/Enemies.tres" type="TileSet" id=6]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/music/Overworld.ogg" type="AudioStream" id=8]
 
-[node name="Level" type="Node" index="0"]
+[node name="Level" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -58,8 +60,11 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 1245216, 6, 0, 1245217, 7, 0, 1245218, 7, 0, 1245219, 7, 0, 1245220, 7, 0, 1245221, 7, 0, 1245222, 7, 0, 1245223, 7, 0, 1245224, 7, 0, 1245225, 7, 0, 1245226, 7, 0, 1245227, 7, 0, 1245228, 7, 0, 1245229, 7, 0, 1245230, 7, 0, 1245231, 7, 0, 1245232, 8, 0, 1310751, 6, 0, 1310752, 18, 0, 1310753, 10, 0, 1310754, 10, 0, 1310755, 10, 0, 1310756, 10, 0, 1310757, 10, 0, 1310758, 10, 0, 1310759, 10, 0, 1310760, 10, 0, 1310761, 10, 0, 1310762, 10, 0, 1310763, 10, 0, 1310764, 10, 0, 1310765, 10, 0, 1310766, 10, 0, 1310767, 10, 0, 1310768, 11, 0, 1376286, 6, 0, 1376287, 15, 0, 1376288, 10, 0, 1376289, 10, 0, 1376290, 10, 0, 1376291, 10, 0, 1376292, 10, 0, 1376293, 10, 0, 1376294, 10, 0, 1376295, 10, 0, 1376296, 10, 0, 1376297, 10, 0, 1376298, 10, 0, 1376299, 10, 0, 1376300, 10, 0, 1376301, 10, 0, 1376302, 10, 0, 1376303, 10, 0, 1376304, 11, 0, 1441821, 6, 0, 1441822, 15, 0, 1441823, 10, 0, 1441824, 10, 0, 1441825, 10, 0, 1441826, 10, 0, 1441827, 10, 0, 1441828, 10, 0, 1441829, 10, 0, 1441830, 10, 0, 1441831, 10, 0, 1441832, 10, 0, 1441833, 10, 0, 1441834, 10, 0, 1441835, 10, 0, 1441836, 10, 0, 1441837, 10, 0, 1441838, 10, 0, 1441839, 10, 0, 1441840, 11, 0, 1507356, 6, 0, 1507357, 18, 0, 1507358, 10, 0, 1507359, 10, 0, 1507360, 10, 0, 1507361, 10, 0, 1507362, 10, 0, 1507363, 10, 0, 1507364, 10, 0, 1507365, 10, 0, 1507366, 10, 0, 1507367, 10, 0, 1507368, 10, 0, 1507369, 10, 0, 1507370, 10, 0, 1507371, 10, 0, 1507372, 10, 0, 1507373, 10, 0, 1507374, 10, 0, 1507375, 10, 0, 1507376, 11, 0, 1572891, 6, 0, 1572892, 18, 0, 1572893, 10, 0, 1572894, 10, 0, 1572895, 10, 0, 1572896, 10, 0, 1572897, 10, 0, 1572898, 10, 0, 1572899, 10, 0, 1572900, 10, 0, 1572901, 10, 0, 1572902, 10, 0, 1572903, 10, 0, 1572904, 10, 0, 1572905, 10, 0, 1572906, 10, 0, 1572907, 10, 0, 1572908, 10, 0, 1572909, 10, 0, 1572910, 10, 0, 1572911, 10, 0, 1572912, 11, 0, 1703932, 0, 0, 1703933, 1, 0, 1703934, 1, 0, 1703935, 1, 0, 1638400, 1, 0, 1638401, 1, 0, 1638402, 1, 0, 1638403, 2, 0, 1638408, 0, 0, 1638409, 1, 0, 1638410, 1, 0, 1638411, 1, 0, 1638412, 1, 0, 1638413, 1, 0, 1638414, 1, 0, 1638415, 1, 0, 1638416, 1, 0, 1638417, 1, 0, 1638418, 1, 0, 1638419, 1, 0, 1638420, 1, 0, 1638421, 2, 0, 1638426, 6, 0, 1638427, 15, 0, 1638428, 10, 0, 1638429, 10, 0, 1638430, 10, 0, 1638431, 10, 0, 1638432, 10, 0, 1638433, 10, 0, 1638434, 10, 0, 1638435, 10, 0, 1638436, 10, 0, 1638437, 10, 0, 1638438, 10, 0, 1638439, 10, 0, 1638440, 10, 0, 1638441, 10, 0, 1638442, 10, 0, 1638443, 10, 0, 1638444, 10, 0, 1638445, 10, 0, 1638446, 10, 0, 1638447, 10, 0, 1638448, 11, 0, 1769468, 3, 0, 1769469, 4, 0, 1769470, 4, 0, 1769471, 4, 0, 1703936, 4, 0, 1703937, 4, 0, 1703938, 4, 0, 1703939, 5, 0, 1703944, 3, 0, 1703945, 4, 0, 1703946, 4, 0, 1703947, 4, 0, 1703948, 4, 0, 1703949, 4, 0, 1703950, 4, 0, 1703951, 4, 0, 1703952, 4, 0, 1703953, 4, 0, 1703954, 4, 0, 1703955, 4, 0, 1703956, 4, 0, 1703957, 5, 0, 1703962, 9, 0, 1703963, 10, 0, 1703964, 10, 0, 1703965, 10, 0, 1703966, 10, 0, 1703967, 10, 0, 1703968, 10, 0, 1703969, 10, 0, 1703970, 10, 0, 1703971, 10, 0, 1703972, 10, 0, 1703973, 10, 0, 1703974, 10, 0, 1703975, 10, 0, 1703976, 10, 0, 1703977, 10, 0, 1703978, 10, 0, 1703979, 10, 0, 1703980, 10, 0, 1703981, 10, 0, 1703982, 10, 0, 1703983, 10, 0, 1703984, 11, 0 )
 _sections_unfolded = [ "Cell", "Collision" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Coins" type="TileMap" parent="." index="2"]
+[node name="Blocks" type="TileMap" parent="." index="2"]
 
 mode = 0
 tile_set = ExtResource( 4 )
@@ -74,25 +79,73 @@ collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
 collision_layer = 1
-collision_mask = 1
+collision_mask = 13
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1441810, 0, 0, 1441811, 0, 0, 1441812, 0, 0 )
+tile_data = PoolIntArray( 1179680, 2, 0, 1179696, 2, 0, 1638396, 2, 0, 1572867, 2, 0, 1572872, 2, 0, 1572885, 2, 0 )
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." index="3" instance=ExtResource( 5 )]
+[node name="Coins" type="TileMap" parent="." index="3"]
 
-[node name="PlayerSpawn" type="Position2D" parent="." index="4"]
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 0
+collision_mask = 0
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1441810, 0, 0, 1441811, 0, 0, 1441812, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemies" type="TileMap" parent="." index="4"]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 0
+collision_mask = 0
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1114149, 0, 0, 1114155, 0, 0, 1507339, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." index="5" instance=ExtResource( 7 )]
+
+[node name="PlayerSpawn" type="Position2D" parent="." index="6"]
 
 position = Vector2( -24, 384 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Music" type="AudioStreamPlayer" parent="." index="5"]
+[node name="Music" type="AudioStreamPlayer" parent="." index="7"]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 8 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true

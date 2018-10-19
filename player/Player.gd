@@ -31,6 +31,9 @@ func change_state(new_state):
 		DEAD:
 			hide()
 
+func hurt():
+	pass
+
 func get_input():
 	if state == HURT:
 		return
@@ -65,6 +68,16 @@ func _physics_process(delta):
 		$AnimationPlayer.play(anim)
 	
 	velocity = move_and_slide(velocity, Vector2(0, -1))
+	for idx in range(get_slide_count()):
+		var collision = get_slide_collision(idx)
+		if collision.collider.is_in_group('enemies'):
+			var player_feet = (position + $CollisionShape2D.shape.extents).y
+			if player_feet < collision.collider.position.y:
+				$StompSound.play()
+				collision.collider.take_damage()
+				velocity.y = -256
+			else:
+				hurt()
 	
 	if state == JUMP and is_on_floor():
 		change_state(IDLE)

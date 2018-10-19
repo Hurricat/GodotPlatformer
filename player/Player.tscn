@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/mario.png" type="Texture" id=2]
 [ext_resource path="res://assets/sounds/jump.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/Stomp.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -66,7 +67,7 @@ tracks/0/keys = {
 "values": [ 20, 21, 19 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 2
@@ -136,6 +137,15 @@ _sections_unfolded = [ "Drag Margin", "Limit", "Smoothing" ]
 
 stream = ExtResource( 3 )
 volume_db = -5.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="StompSound" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
