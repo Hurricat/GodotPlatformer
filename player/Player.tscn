@@ -2,12 +2,12 @@
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/mario.png" type="Texture" id=2]
-[ext_resource path="res://assets/sounds/smw_jump.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/jump.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 6, 13 )
+extents = Vector2( 6, 12 )
 
 [sub_resource type="Animation" id=2]
 
@@ -25,7 +25,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 8 ]
+"values": [ 19 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -44,7 +44,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 13 ]
+"values": [ 24 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -63,7 +63,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 10, 9, 8 ]
+"values": [ 20, 21, 19 ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -71,9 +71,9 @@ tracks/0/keys = {
 input_pickable = false
 collision_layer = 2
 collision_mask = 13
-collision/safe_margin = 0.08
+collision/safe_margin = 0.001
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -84,15 +84,13 @@ gravity = 32
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-flip_h = true
-vframes = 2
-hframes = 8
-frame = 8
+hframes = 53
+frame = 19
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, 2 )
+position = Vector2( 0, 4 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -118,17 +116,17 @@ limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
 limit_bottom = 432
-limit_smoothed = true
+limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = true
-smoothing_speed = 15.0
+smoothing_enabled = false
+smoothing_speed = 10.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.1
-drag_margin_top = 0.1
-drag_margin_right = 0.1
-drag_margin_bottom = 0.1
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false

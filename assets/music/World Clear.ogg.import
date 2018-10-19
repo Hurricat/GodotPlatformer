@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/World Clear.ogg-e58b28e6dec69ae4fb18569a0b5e3d02.oggstr"
+
+[deps]
+
+source_file="res://assets/music/World Clear.ogg"
+dest_files=[ "res://.import/World Clear.ogg-e58b28e6dec69ae4fb18569a0b5e3d02.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

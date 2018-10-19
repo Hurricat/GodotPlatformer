@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Undergrounds.ogg-1b40229a6e292dbd6218fe74e5811bc1.oggstr"
+
+[deps]
+
+source_file="res://assets/music/Undergrounds.ogg"
+dest_files=[ "res://.import/Undergrounds.ogg-1b40229a6e292dbd6218fe74e5811bc1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

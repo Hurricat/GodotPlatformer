@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Course Clear.ogg-16d6a0dd03d19a3be9105f357389e965.oggstr"
+
+[deps]
+
+source_file="res://assets/music/Course Clear.ogg"
+dest_files=[ "res://.import/Course Clear.ogg-16d6a0dd03d19a3be9105f357389e965.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

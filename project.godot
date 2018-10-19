@@ -11,6 +11,7 @@ config_version=3
 [application]
 
 config/name="Platformer"
+run/main_scene="res://levels/Level.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -61,7 +62,6 @@ jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 
 [rendering]
 
-quality/intended_usage/framebuffer_allocation=1
 quality/2d/use_pixel_snap=true
 environment/default_clear_color=Color( 0, 0.388235, 0.741176, 1 )
 environment/default_environment="res://default_env.tres"

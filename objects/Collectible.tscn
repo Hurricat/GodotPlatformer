@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/Collectible.gd" type="Script" id=1]
-[ext_resource path="res://assets/tiles/objects.png" type="Texture" id=2]
-[ext_resource path="res://assets/sounds/smw_coin.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/tiles/items.png" type="Texture" id=2]
+[ext_resource path="res://assets/sounds/Coin.wav" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -52,8 +52,8 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
-vframes = 25
-hframes = 14
+vframes = 3
+hframes = 4
 frame = 3
 _sections_unfolded = [ "Animation" ]
 
