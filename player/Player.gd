@@ -78,6 +78,11 @@ func _physics_process(delta):
 				velocity.y = -256
 			else:
 				hurt()
+		if collision.collider.is_in_group('blocks'):
+			var player_head = position.y
+			if player_head > collision.collider.position.y + 16 and velocity.y <= 0:
+				pass
+				# TODO - collider.block_struck()
 	
 	if state == JUMP and is_on_floor():
 		change_state(IDLE)
